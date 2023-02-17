@@ -6,6 +6,7 @@ body {
     margin-bottom: 0;
     margin-top: 0;
     font-family: 'Raleway', sans-serif;
+    max-width: 1400px;
 }
 
 h1,
@@ -19,41 +20,56 @@ h6 {
 
 .text-title {
     font-weight: 700;
-    font-size: 22px;
+    font-size: 20px;
     line-height: 26px;
     color: black;
 }
 
 .text-big-bold {
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 21px;
     color: black;
 }
 
 .text-filters {
     font-weight: 700;
-    font-size: 17px;
+    font-size: 15px;
     line-height: 20px;
     color: black;
 }
 
+/* clamp(12, + 1rem,16) */
+
 .text-card {
     font-weight: 700;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
+    color: black;
+}
+
+.text-card-information {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
     color: black;
 }
 
 .text-information {
     font-weight: 400;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
     color: black;
 }
 
 a {
     text-decoration: none;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 .card {
@@ -78,20 +94,24 @@ a {
 }
 
 .margin-wrapper {
-    margin: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30px;
+}
+
+.card-list-margin {
+    margin-top: 20px;
+    margin-bottom: 35px;
 }
 
 /*------------------------------------*/
 
-nav {
+.navigation {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 16vh;
-}
-
-nav .text-information {
-    font-weight: 500;
+    height: 90px;
 }
 
 .nav-logo {
@@ -108,13 +128,12 @@ nav .text-information {
 
 .links-container__link {
     transition: .2s;
+    padding: 35px 10px 0px 10px;
+    border-top: transparent 3px solid;
 }
 
 .links-container__link:hover {
-    color: #0065FC;
-    text-decoration-line: underline;
-    text-underline-offset: -51px;
-    text-decoration-thickness: 2px;
+    border-color: #0065FC;
 }
 
 /*---------------------------------------------------------------------------*/
@@ -154,6 +173,14 @@ nav .text-information {
     transition: .2s;
 }
 
+.location-search__submit__classic {
+    margin: 0;
+}
+
+.location-search__submit__phone {
+    display: none;
+}
+
 .location-search__submit:hover {
     cursor: pointer;
 }
@@ -162,11 +189,17 @@ nav .text-information {
 
 .filters {
     display: flex;
-    width: 800px;
+    width: max(685px, min(87vw, 800px));
     justify-content: space-between;
     align-items: center;
     margin-top: 26px;
     margin-left: 5px;
+}
+
+.filters-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }
 
 .filters__bubble {
@@ -175,9 +208,10 @@ nav .text-information {
     justify-content: space-evenly;
     border-radius: 30px;
     height: fit-content;
-    padding: 11px 16px;
+    padding: 9px 16px;
     border: solid 2px #D9D9D9;
     transition: .2s;
+    background-color: white;
 }
 
 .filters__bubble:hover {
@@ -232,8 +266,6 @@ nav .text-information {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    margin-top: 20px;
-    margin-bottom: 35px;
 }
 
 .accommodation__list__card {
@@ -242,6 +274,7 @@ nav .text-information {
     padding: 5px;
     padding-bottom: 12px;
     background-color: white;
+
 }
 
 .accommodation-image {
@@ -268,12 +301,23 @@ nav .text-information {
 
 .trendings-title {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chart-blue {
+    color: #0065FC;
+}
+
+.test {
+    height: 80%;
 }
 
 .trendings__list {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    height: 100%;
 }
 
 .trendings__list__card {
@@ -287,7 +331,7 @@ nav .text-information {
     object-fit: cover;
     border-radius: 15px 0px 0px 15px;
     margin-right: 8px;
-    width: 40%;
+    width: 110px;
 }
 
 .trendings-content {
@@ -328,6 +372,12 @@ nav .text-information {
     object-fit: cover;
 }
 
+.activities-text-content {
+    flex: 1 0 auto;
+    display: flex;
+    align-items: center;
+}
+
 .activities__text-margin {
     margin-left: 18px;
     margin-right: 18px;
@@ -335,7 +385,7 @@ nav .text-information {
 
 /*---------------------------------------------------------------------------*/
 
-footer {
+.footer {
     background-color: #F2F2F2;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -345,4 +395,143 @@ footer {
 
 .text-margin-bottom {
     margin-bottom: 25px;
+}
+
+/*---------------------------------------------------------------------------*/
+
+@media (max-width: 992px) {
+
+    body {
+        margin-left: 5vw;
+        margin-right: 5vw;
+    }
+
+    .results {
+        flex-direction: column;
+    }
+
+    .accommodation {
+        width: 100%;
+    }
+
+    .trendings {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 40px;
+    }
+
+    .trendings__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .trendings-image {
+        width: 85px;
+        aspect-ratio: 1/1.25;
+    }
+
+    .trendings .text-card {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .trendings .text-card-information {
+        font-size: 11px;
+        line-height: 15px;
+    }
+
+    .text-margin {
+        margin-left: 3px;
+        margin-right: 3px;
+    }
+
+    .footer {
+        padding: 40px 40px 30px 40px;
+    }
+
+    .text-filters {
+        font-size: 13px;
+    }
+}
+
+/*---------------------------------------------------------------------------*/
+
+@media (max-width: 768px) {
+
+    body {
+        margin: 0;
+    }
+
+    .navigation {
+        flex-direction: column;
+        height: 150px;
+        justify-content: space-around;
+        margin-bottom: 20px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .links-container {
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .links-container li {
+        width: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .links-container__link {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding-bottom: 15px;
+        border-top: none;
+        border-bottom: #F2F2F2 3px solid;
+    }
+
+    .links-container__link:hover {
+        border-color: #0065FC;
+    }
+
+    .header,
+    .research,
+    .accommodation,
+    .activities {
+        margin: 0px 15px;
+    }
+
+    .research {
+        padding-top: 20px;
+    }
+
+    .location-search__submit__classic {
+        display: none;
+    }
+
+    .location-search__submit__phone {
+        display: initial;
+        font-size: 17px;
+        padding: 0px 5px;
+    }
+
+    .filters {
+        flex-direction: column;
+        justify-content: initial;
+        align-items: initial;
+    }
+
+    .filters-list {
+        display: inline;
+    }
+
+    .filters__bubble {
+        display: inline;
+    }
+
 }
