@@ -2,6 +2,7 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -12,6 +13,7 @@ body {
     font-family: 'Raleway', sans-serif;
     max-width: 1400px;
     overflow-x: hidden;
+
 }
 
 h1,
