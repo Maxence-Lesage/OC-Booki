@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     margin-left: 3.8vw;
     margin-right: 3.8vw;
@@ -31,8 +35,6 @@ h6 {
     line-height: 21px;
     color: black;
 }
-
-/* clamp(12, + 1rem,16) */
 
 .text-card {
     font-weight: 700;
@@ -268,6 +270,13 @@ ul {
     gap: 20px;
 }
 
+.accommodation-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
 .accommodation__list__card {
     display: flex;
     flex-direction: column;
@@ -351,7 +360,7 @@ ul {
 .activities {
     display: flex;
     flex-direction: column;
-    margin-top: 40px;
+    padding-top: 40px;
     margin-bottom: 40px;
 }
 
