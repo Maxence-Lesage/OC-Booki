@@ -11,6 +11,7 @@ body {
     margin-top: 0;
     font-family: 'Raleway', sans-serif;
     max-width: 1400px;
+    overflow-x: hidden;
 }
 
 h1,
