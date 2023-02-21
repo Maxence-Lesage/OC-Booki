@@ -170,6 +170,10 @@ ul {
     width: clamp(162px, 47vw + 16px, 190px);
 }
 
+.location-search__input::placeholder {
+    opacity: 1;
+}
+
 .location-search__submit {
     background-color: var(--blue);
     color: white;
