@@ -1,5 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
+:root {
+    --blue: #0065FC;
+    --light-blue: #DEEBFF;
+    --light-gray: #D9D9D9;
+    --black: #000000;
+    --darken-white: #F2F2F2;
+}
+
 html {
     scroll-behavior: smooth;
     overflow-x: hidden;
@@ -13,7 +21,7 @@ body {
     font-family: 'Raleway', sans-serif;
     max-width: 1400px;
     overflow-x: hidden;
-
+    color: var(--black);
 }
 
 h1,
@@ -29,39 +37,35 @@ h6 {
     font-weight: 700;
     font-size: 21.7px;
     line-height: 26px;
-    color: black;
 }
 
 .text-big-bold {
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
-    color: black;
 }
 
 .text-card {
     font-weight: 700;
     font-size: 16px;
     line-height: 19px;
-    color: black;
 }
 
 .text-card-information {
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
-    color: black;
 }
 
 .text-information {
     font-weight: 400;
     font-size: 15.8px;
     line-height: 19px;
-    color: black;
 }
 
 a {
     text-decoration: none;
+    color: var(--black);
 }
 
 ul {
@@ -78,7 +82,7 @@ ul {
 
 .stars {
     display: flex;
-    color: #0065FC;
+    color: var(--blue);
     font-size: 12px;
 }
 
@@ -131,7 +135,8 @@ ul {
 }
 
 .links-container__link:hover {
-    border-color: #0065FC;
+    border-color: var(--blue);
+    color: var(--blue);
 }
 
 /*---------------------------------------------------------------------------*/
@@ -161,12 +166,12 @@ ul {
 }
 
 .location-search__input {
-    border: 1px solid #F2F2F2;
+    border: 1px solid var(--darken-white);
     width: clamp(162px, 47vw + 16px, 190px);
 }
 
 .location-search__submit {
-    background-color: #0065FC;
+    background-color: var(--blue);
     color: white;
     transition: .2s;
 }
@@ -214,19 +219,19 @@ ul {
     border-radius: 30px;
     height: fit-content;
     padding: 9px 16px;
-    border: solid 2px #D9D9D9;
+    border: solid 2px var(--light-gray);
     transition: .2s;
     background-color: white;
 }
 
 .filters__bubble:hover {
-    background-color: #DEEBFF;
+    background-color: var(--light-blue);
     cursor: pointer;
 }
 
 .filters__icon {
     font-size: 17px;
-    color: #0065FC;
+    color: var(--blue);
     margin-right: 10px;
 }
 
@@ -242,9 +247,9 @@ ul {
 .search-information__logo {
     height: 20px;
     width: 20px;
-    border: 1px solid #D9D9D9;
+    border: 1px solid var(--light-gray);
     border-radius: 50%;
-    color: #0065FC;
+    color: var(--blue);
     margin-left: 5px;
     margin-right: 15px;
     font-size: 10px;
@@ -304,7 +309,7 @@ ul {
 /*---------------------------------------------------------------------------*/
 
 .trendings {
-    background-color: #F2F2F2;
+    background-color: var(--darken-white);
     border-radius: 10px;
     overflow: hidden;
     margin-left: 3%;
@@ -318,7 +323,7 @@ ul {
 }
 
 .chart-blue {
-    color: #0065FC;
+    color: var(--blue);
 }
 
 .test {
@@ -398,7 +403,7 @@ ul {
 /*---------------------------------------------------------------------------*/
 
 .footer {
-    background-color: #F2F2F2;
+    background-color: var(--darken-white);
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
@@ -518,11 +523,11 @@ ul {
         width: 100%;
         padding-bottom: 15px;
         border-top: none;
-        border-bottom: #F2F2F2 3px solid;
+        border-bottom: var(--darken-white) 3px solid;
     }
 
     .links-container__link:hover {
-        border-color: #0065FC;
+        border-color: var(--blue);
     }
 
     /*RESEARCH*/
